@@ -1,8 +1,10 @@
-# Notas:
+# Chat con JQuery
 
-Este es un pequeño servidor de express listo para ejecutarse y servir la carpeta public en la web.
+![chat](./galeria/acceso-chat.PNG "chat")
 
-Recuerden que deben de reconstruir los módulos de node con el comando
+![chat](./galeria/sala-chat.PNG "chat")
+
+Reconstruir los módulos de node con el comando
 
 ```
 npm install

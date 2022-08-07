@@ -19,7 +19,8 @@ socket.on('connect', function() {
     console.log('Conectado al servidor');
 
     socket.emit('entrarChat', usuario, function(resp) {
-        console.log('Usuarios Conectados', resp)
+        // console.log('Usuarios Conectados', resp)
+        renderizarUsuarios(resp);
     })
 });
 
@@ -44,7 +45,9 @@ socket.on('disconnect', function() {
 // Escuchar información
 socket.on('crearMensaje', function(mensaje) {
 
-    console.log('Servidor:', mensaje);
+    // console.log('Servidor:', mensaje);
+    renderizarMensajes(mensaje, false);
+    scrollBottom()
 
 });
 
@@ -52,7 +55,8 @@ socket.on('crearMensaje', function(mensaje) {
 // Escuchar cambios cuando un usuario entra o sale del chat
 socket.on('listarPersona', function(personas) {
 
-    console.log(personas);
+    renderizarUsuarios(personas);
+    // console.log(personas);
 
 });
 
